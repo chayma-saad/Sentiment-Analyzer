@@ -1,0 +1,86 @@
+{
+  "@@locale": "en",
+  "appTitle": "Sentiment Analyzer",
+  "@appTitle": { "description": "App title" },
+
+  "homeTitle": "How are you feeling?",
+  "@homeTitle": { "description": "Home page title" },
+
+  "homeSubtitle": "Enter your text and get an AI-powered sentiment analysis.",
+  "@homeSubtitle": { "description": "Home page subtitle" },
+
+  "inputHint": "Type or paste your text here...",
+  "@inputHint": { "description": "Text input hint" },
+
+  "analyzeButton": "Analyze Sentiment",
+  "@analyzeButton": { "description": "Button to trigger analysis" },
+
+  "analyzingButton": "Analyzing...",
+  "@analyzingButton": { "description": "Button loading state text" },
+
+  "realTimeMode": "Real-time analysis",
+  "@realTimeMode": { "description": "Toggle label for real-time mode" },
+
+  "realTimeModeTooltip": "Automatically analyzes as you type (debounced)",
+  "@realTimeModeTooltip": { "description": "Tooltip for real-time toggle" },
+
+  "historyTitle": "History",
+  "@historyTitle": { "description": "History page title" },
+
+  "historyEmpty": "No analyses yet",
+  "@historyEmpty": { "description": "Empty history title" },
+
+  "historyEmptySubtitle": "Your sentiment analyses will appear here after you run them.",
+  "@historyEmptySubtitle": { "description": "Empty history subtitle" },
+
+  "clearHistory": "Clear History",
+  "@clearHistory": { "description": "Clear history button tooltip" },
+
+  "clearHistoryConfirmTitle": "Clear History",
+  "@clearHistoryConfirmTitle": { "description": "Confirm clear dialog title" },
+
+  "clearHistoryConfirmMessage": "Are you sure you want to delete all history? This cannot be undone.",
+  "@clearHistoryConfirmMessage": { "description": "Confirm clear dialog message" },
+
+  "cancel": "Cancel",
+  "@cancel": { "description": "Cancel button" },
+
+  "clearAll": "Clear All",
+  "@clearAll": { "description": "Clear all button" },
+
+  "exportCsv": "Export as CSV",
+  "@exportCsv": { "description": "Export CSV tooltip" },
+
+  "sentimentPositive": "Positive",
+  "@sentimentPositive": { "description": "Positive sentiment label" },
+
+  "sentimentNegative": "Negative",
+  "@sentimentNegative": { "description": "Negative sentiment label" },
+
+  "sentimentNeutral": "Neutral",
+  "@sentimentNeutral": { "description": "Neutral sentiment label" },
+
+  "confidence": "Confidence",
+  "@confidence": { "description": "Confidence label" },
+
+  "motivation": "Motivation",
+  "@motivation": { "description": "Motivation label" },
+
+  "errorTitle": "Something went wrong",
+  "@errorTitle": { "description": "Error widget title" },
+
+  "retryButton": "Try Again",
+  "@retryButton": { "description": "Retry button label" },
+
+  "loadingHistory": "Loading history...",
+  "@loadingHistory": { "description": "Loading history message" },
+
+  "analyzingSentiment": "Analyzing sentiment...",
+  "@analyzingSentiment": { "description": "Analyzing sentiment message" },
+
+  "toggleTheme": "Toggle theme",
+  "@toggleTheme": { "description": "Theme toggle tooltip" },
+
+  "originalText": "Original text:",
+  "@originalText": { "description": "Original text label in detail view" }
+}
