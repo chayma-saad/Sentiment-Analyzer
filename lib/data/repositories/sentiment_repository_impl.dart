@@ -8,7 +8,6 @@ import '../../domain/entities/sentiment_analysis.dart';
 import '../../domain/repositories/sentiment_repository.dart';
 import '../datasources/local/history_local_datasource.dart';
 import '../datasources/remote/sentiment_remote_datasource.dart';
-import '../models/sentiment_model.dart';
 
 class SentimentRepositoryImpl implements SentimentRepository {
   const SentimentRepositoryImpl({
