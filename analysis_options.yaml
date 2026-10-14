@@ -20,6 +20,8 @@ linter:
 analyzer:
   errors:
     invalid_annotation_target: ignore
+    # withOpacity() is deprecated since Flutter 3.27; migrate to withValues(alpha:) with `dart fix --apply`
+    deprecated_member_use: ignore
   exclude:
     - lib/l10n/**
     - "**/*.g.dart"
