@@ -21,7 +21,8 @@ class SentimentResultCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Icon(_sentimentIcon(analysis.sentiment), color: sentimentColor, size: 28),
+                Icon(_sentimentIcon(analysis.sentiment),
+                    color: sentimentColor, size: 28),
                 const SizedBox(width: 12),
                 Text(
                   analysis.sentiment.label,
@@ -31,11 +32,13 @@ class SentimentResultCard extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                _ConfidenceBadge(percent: analysis.confidencePercent, color: sentimentColor),
+                _ConfidenceBadge(
+                    percent: analysis.confidencePercent, color: sentimentColor),
               ],
             ),
             const SizedBox(height: 16),
-            _ConfidenceBar(value: analysis.confidenceScore, color: sentimentColor),
+            _ConfidenceBar(
+                value: analysis.confidenceScore, color: sentimentColor),
             const SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.all(16),
@@ -49,7 +52,8 @@ class SentimentResultCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.lightbulb_outline, color: sentimentColor, size: 18),
+                      Icon(Icons.lightbulb_outline,
+                          color: sentimentColor, size: 18),
                       const SizedBox(width: 8),
                       Text(
                         'Motivation',

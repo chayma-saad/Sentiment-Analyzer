@@ -38,8 +38,10 @@ class SentimentRemoteDataSourceImpl implements SentimentRemoteDataSource {
             'content-type': 'application/json',
             'authorization': 'Bearer $apiKey',
           },
-          sendTimeout: const Duration(seconds: AppConstants.requestTimeoutSeconds),
-          receiveTimeout: const Duration(seconds: AppConstants.requestTimeoutSeconds),
+          sendTimeout:
+              const Duration(seconds: AppConstants.requestTimeoutSeconds),
+          receiveTimeout:
+              const Duration(seconds: AppConstants.requestTimeoutSeconds),
         ),
         data: {
           'model': model,
@@ -74,14 +76,14 @@ class SentimentRemoteDataSourceImpl implements SentimentRemoteDataSource {
         throw const MalformedResponseException();
       }
 
-      final rawText =
-          choices.first['message']['content'] as String? ?? '';
+      final rawText = choices.first['message']['content'] as String? ?? '';
 
       // Extract JSON from the response (Gemini may wrap it in markdown)
       final jsonStart = rawText.indexOf('{');
       final jsonEnd = rawText.lastIndexOf('}');
       if (jsonStart == -1 || jsonEnd == -1) {
-        throw const MalformedResponseException(message: 'No JSON found in response');
+        throw const MalformedResponseException(
+            message: 'No JSON found in response');
       }
 
       final jsonStr = rawText.substring(jsonStart, jsonEnd + 1);

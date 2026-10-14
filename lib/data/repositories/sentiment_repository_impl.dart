@@ -24,7 +24,8 @@ class SentimentRepositoryImpl implements SentimentRepository {
   final Uuid uuid;
 
   @override
-  Future<Either<Failure, SentimentAnalysis>> analyzeSentiment(String text) async {
+  Future<Either<Failure, SentimentAnalysis>> analyzeSentiment(
+      String text) async {
     final isConnected = await networkInfo.isConnected;
     if (!isConnected) {
       return const Left(NoInternetFailure());

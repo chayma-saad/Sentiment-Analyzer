@@ -16,7 +16,8 @@ class SentimentModel extends SentimentAnalysis {
     required String inputText,
     required DateTime analyzedAt,
   }) {
-    final sentimentRaw = (json['sentiment'] as String?)?.toLowerCase() ?? 'neutral';
+    final sentimentRaw =
+        (json['sentiment'] as String?)?.toLowerCase() ?? 'neutral';
     final sentiment = _parseSentiment(sentimentRaw);
     final confidence = (json['confidence'] as num?)?.toDouble() ?? 0.5;
     final motivation = json['motivation'] as String? ?? '';
@@ -38,7 +39,8 @@ class SentimentModel extends SentimentAnalysis {
       sentiment: _parseSentiment(map['sentiment'] as String),
       confidenceScore: (map['confidence_score'] as num).toDouble(),
       motivation: map['motivation'] as String,
-      analyzedAt: DateTime.fromMillisecondsSinceEpoch(map['analyzed_at'] as int),
+      analyzedAt:
+          DateTime.fromMillisecondsSinceEpoch(map['analyzed_at'] as int),
     );
   }
 

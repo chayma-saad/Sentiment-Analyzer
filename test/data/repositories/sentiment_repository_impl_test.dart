@@ -106,7 +106,8 @@ void main() {
       expect(result, const Left(InvalidApiKeyFailure()));
     });
 
-    test('returns MalformedResponseFailure on MalformedResponseException', () async {
+    test('returns MalformedResponseFailure on MalformedResponseException',
+        () async {
       when(mockRemote.analyzeSentiment(
         text: anyNamed('text'),
         id: anyNamed('id'),

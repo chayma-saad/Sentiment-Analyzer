@@ -15,7 +15,8 @@ final tNegativeAnalysis = SentimentModel(
   inputText: 'Everything is going wrong.',
   sentiment: SentimentType.negative,
   confidenceScore: 0.85,
-  motivation: 'Remember that tough times never last. You have the strength to get through this.',
+  motivation:
+      'Remember that tough times never last. You have the strength to get through this.',
   analyzedAt: DateTime(2024, 1, 15, 11, 0),
 );
 
@@ -34,7 +35,8 @@ const tApiResponse = {
   'content': [
     {
       'type': 'text',
-      'text': '{"sentiment":"positive","confidence":0.92,"motivation":"Keep up the great energy!"}',
+      'text':
+          '{"sentiment":"positive","confidence":0.92,"motivation":"Keep up the great energy!"}',
     }
   ],
 };

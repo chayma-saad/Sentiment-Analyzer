@@ -28,8 +28,7 @@ void main() {
   });
 
   test('should return empty list when history is empty', () async {
-    when(mockRepository.getHistory())
-        .thenAnswer((_) async => const Right([]));
+    when(mockRepository.getHistory()).thenAnswer((_) async => const Right([]));
 
     final result = await useCase(const NoParams());
 

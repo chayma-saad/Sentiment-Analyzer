@@ -13,7 +13,8 @@ abstract class HistoryLocalDataSource {
 
 class HistoryLocalDataSourceImpl implements HistoryLocalDataSource {
   HistoryLocalDataSourceImpl._();
-  static final HistoryLocalDataSourceImpl instance = HistoryLocalDataSourceImpl._();
+  static final HistoryLocalDataSourceImpl instance =
+      HistoryLocalDataSourceImpl._();
 
   Database? _database;
 

@@ -9,4 +9,3 @@ abstract class AppConstants {
   static const String historyTableName = 'analyses';
   static const int maxInputLength = 2000;
 }
-  

@@ -5,7 +5,8 @@ import '../../core/usecases/usecase.dart';
 import '../entities/sentiment_analysis.dart';
 import '../repositories/sentiment_repository.dart';
 
-class AnalyzeSentimentUseCase implements UseCase<SentimentAnalysis, AnalyzeParams> {
+class AnalyzeSentimentUseCase
+    implements UseCase<SentimentAnalysis, AnalyzeParams> {
   const AnalyzeSentimentUseCase({required this.repository});
   final SentimentRepository repository;
 

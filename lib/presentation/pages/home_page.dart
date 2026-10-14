@@ -147,9 +147,8 @@ class _HomePageState extends State<HomePage> {
           builder: (context, state) {
             final isLoading = state is SentimentLoading;
             return ElevatedButton.icon(
-              onPressed: isLoading
-                  ? null
-                  : () => _analyze(_textController.text),
+              onPressed:
+                  isLoading ? null : () => _analyze(_textController.text),
               icon: isLoading
                   ? const SizedBox(
                       width: 18,
