@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:sentiment_motivator/core/errors/failures.dart';
-import 'package:sentiment_motivator/core/usecases/usecase.dart';
 import 'package:sentiment_motivator/domain/usecases/clear_history_usecase.dart';
 import 'package:sentiment_motivator/domain/usecases/delete_analysis_usecase.dart';
 import 'package:sentiment_motivator/domain/usecases/export_history_usecase.dart';
