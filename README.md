@@ -1,12 +1,17 @@
 # Sentiment Motivator
 
-A Flutter mobile application that performs AI-powered sentiment analysis on user text and provides motivational feedback. Built for Android and iOS using Clean Architecture and the Groq API (Llama 3.1).
+A Flutter mobile application that performs AI-powered sentiment analysis on user text and provides motivational feedback. Built for Android using Clean Architecture and the Groq API (Llama 3.1).
+
+[![CI](https://github.com/chayma-saad/Sentiment-Analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/chayma-saad/Sentiment-Analyzer/actions/workflows/ci.yml)
+[![Demo](https://img.shields.io/badge/Demo-Watch%20video-ec4899?logo=youtube&logoColor=white)](https://github.com/chayma-saad/Sentiment-Analyzer/blob/main/sentiment_analyzer_demo.mp4)
+[![Flutter](https://img.shields.io/badge/Flutter-3.29-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-## Screenshots
+## Demo
 
->   screen recording .
+🎬 **[Watch the demo video](https://github.com/chayma-saad/Sentiment-Analyzer/blob/main/sentiment_analyzer_demo.mp4)** (screen recording of the app on Android).
 
 ---
 
@@ -16,15 +21,15 @@ A Flutter mobile application that performs AI-powered sentiment analysis on user
 
 | Tool | Minimum version |
 |------|----------------|
-| Flutter SDK | 3.22.0 |
-| Dart SDK | 3.1.0 |
-| Android Studio / Xcode | Latest stable |
+| Flutter SDK | 3.29.0 |
+| Dart SDK | 3.7.0 |
+| Android Studio | Latest stable |
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/sentiment-motivator.git
-cd sentiment-motivator
+git clone https://github.com/chayma-saad/Sentiment-Analyzer.git
+cd Sentiment-Analyzer
 ```
 
 ### 2. Configure your API key
@@ -60,52 +65,13 @@ flutter pub run build_runner build --delete-conflicting-outputs
 
 ### 5. Run the app
 
-#### On Windows (with Android emulator)
-
-> **Note:** Flutter and the Android SDK are not on the system PATH on this machine. Use the full paths below.
-
-**Step 1 — Start the emulator** (run once, leave the window open):
-
-```cmd
-mkdir D:\Android\tmp
-set TEMP=D:\Android\tmp
-set TMP=D:\Android\tmp
-set ANDROID_SDK_ROOT=D:\Android\sdk
-set ANDROID_AVD_HOME=D:\Android\avd
-D:\Android\sdk\emulator\emulator.exe -avd Pixel_6_API_36_stable -no-snapshot-load -no-boot-anim -gpu swiftshader_indirect -no-audio -memory 3072
-```
-
-> **Note:** `set TEMP` and `set TMP` redirect emulator temp files to D: drive. Required if C: drive has low free space.
-
-Wait ~2–3 minutes for the emulator to fully boot (Android home screen visible), then:
-
-```powershell
-# Confirm the device is ready
-D:\Android\sdk\platform-tools\adb.exe devices
-# Expected: emulator-5554   device
-```
-
-**Step 2 — Run the app:**
-
-```powershell
-set PUB_CACHE=D:\pub_cache
-set ANDROID_SDK_ROOT=D:\Android\sdk
-cd D:\Projects\jordan
-D:\flutter\bin\flutter.bat run -d emulator-5554
-
-```
-
-The first build takes ~8–10 minutes (Gradle downloads dependencies). Subsequent builds are much faster.
-
-#### On other platforms
+Start an Android emulator (or plug in a device), then:
 
 ```bash
-# Android (device or emulator already running)
-flutter run -d android
-
-# iOS (macOS required)
-flutter run -d ios
+flutter run
 ```
+
+The first build takes several minutes while Gradle downloads its dependencies.
 
 ### 6. Run tests
 
@@ -212,9 +178,8 @@ GitHub Actions runs on every push and pull request to `main` / `develop`:
 
 | Job | What it does |
 |-----|-------------|
-| **test** | `flutter analyze` (zero warnings), `flutter test --coverage` |
+| **test** | `dart format` check, `flutter analyze` (zero warnings), `flutter test --coverage` |
 | **build-android** | `flutter build apk --debug` → uploads artifact |
-| **build-ios** | `flutter build ios --no-codesign --debug` (macOS runner) |
 
 Set the `GROQ_API_KEY` repository secret in **Settings → Secrets and variables → Actions**.
 
